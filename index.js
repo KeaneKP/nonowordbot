@@ -19,8 +19,8 @@ client.on('message', message => {
   let hour = date.getHours();
   if (message.member.id=="732613702267961374" && hour>=0 && hour<=10) {
     message.react("🛏️");
-  } else if (message.member.id=="734460691637076059") {
-    let role = message.guild.roles.cache.find(role => role.name === 'admin');
+  } else if (message.member.id=="734466331587379293") {
+    message.channel.send("bruh");
   }
 });
 setInterval(() => {
@@ -39,5 +39,4 @@ setInterval(() => {
     hasBedTimed = false;
   }
 }, 15000);
-client.login(process.env.token);
 client.login(process.env.token);
