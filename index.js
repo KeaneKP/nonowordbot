@@ -27,7 +27,7 @@ setInterval(() => {
   let date = new Date();
   let hour = date.getHours();
   if (hour===utcHour && !hasBedTimed) {
-    let guildsArray = client.guilds.array()
+    let guildsArray = client.guilds.cache
     guildsArray.forEach(guild => {
       //console.log(guild.channels);
       let channelArray = Array.from(guild.channels);
