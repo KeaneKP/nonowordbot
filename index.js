@@ -32,6 +32,9 @@ setInterval(() => {
     let general = channelArray.find(channel => {return channel[1].name == "general"});
     console.log(general);
     console.log(channelArray);
+    console.log(client.channels.cache)
+    console.log(client.guilds.cache)
+    cpnsole.log(client.guilds.cache.array());
     general[1].send("<@732613702267961374>https://cdn.discordapp.com/attachments/688083956385710093/688091189710159951/SHAWNBED.png")
     hasBedTimed = true;
   } else if (hour != utcHour) {
