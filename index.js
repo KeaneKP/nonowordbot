@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const badWords = require("./badWords.json");
 let hasBedTimed = false;
-let utcHour = 0;
+let utcHour = 1;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -30,6 +30,8 @@ setInterval(() => {
     let server = client.guilds.cache.get("487728941725909002")
     let channelArray = Array.from(server.channels);
     let general = channelArray.find(channel => {return channel[1].name == "general"});
+    console.log(general);
+    console.log(channelArray);
     general[1].send("<@732613702267961374>https://cdn.discordapp.com/attachments/688083956385710093/688091189710159951/SHAWNBED.png")
     hasBedTimed = true;
   } else if (hour != utcHour) {
