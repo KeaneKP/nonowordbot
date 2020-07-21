@@ -27,13 +27,10 @@ setInterval(() => {
   let date = new Date();
   let hour = date.getHours();
   if (hour===utcHour && !hasBedTimed) {
-    let guildsArray = client.guilds.cache
-    guildsArray.forEach(guild => {
-      //console.log(guild.channels);
-      let channelArray = Array.from(guild.channels);
-      let general = channelArray.find(channel => {return channel[1].name == "general"});
-      general[1].send("<@732613702267961374>https://cdn.discordapp.com/attachments/688083956385710093/688091189710159951/SHAWNBED.png")
-    });
+    let server = client.guilds.cache.get("487728941725909002")
+    let channelArray = Array.from(server.channels);
+    let general = channelArray.find(channel => {return channel[1].name == "general"});
+    general[1].send("<@732613702267961374>https://cdn.discordapp.com/attachments/688083956385710093/688091189710159951/SHAWNBED.png")
     hasBedTimed = true;
   } else if (hour != utcHour) {
     hasBedTimed = false;
