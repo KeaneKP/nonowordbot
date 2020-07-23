@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const data = require("./badWords.json");
+const data = require("./data.json");
 let hasBedTimed = false;
 let utcHour = 1;
 client.on('ready', () => {
