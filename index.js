@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const badWords = require("./badWords.json");
+const data = require("./badWords.json");
 let hasBedTimed = false;
 let utcHour = 1;
 client.on('ready', () => {
@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   message.content = message.content.toLowerCase();
-  badWords.array.forEach( word => {
+  data.badWords.forEach( word => {
     if (message.content.includes(word)) {
       message.delete();
       return;
